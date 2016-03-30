@@ -1,8 +1,8 @@
-sudoku:a.o main.o
-	g++ -o sudoku a.o main.o
-a.o:a.cpp a.h
-	g++ -c a.cpp
-main.o:main.cpp a.h
+sudoku:Sudoku.o main.o
+	g++ -o sudoku Sudoku.o main.o
+Sudoku.o:Sudoku.cpp Sudoku.h
+	g++ -c Sudoku.cpp
+main.o:main.cpp Sudoku.h
 	g++ -c main.cpp
 clean:
-	rm a.o main.o
+	rm Sudoku.o main.o
