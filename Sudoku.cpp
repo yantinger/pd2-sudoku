@@ -163,6 +163,29 @@ void Sudoku::solve()
 	int i,j;
 
 
+for(int i=0; i<9; i++)
+{
+	for(int j=0; j<9; j++)
+	{
+		for(int k=j+1; k<9; k++)
+		{
+			for(int l=i+1; l<9; l++)
+			{
+
+
+				if(arr[i][j]!=0)
+				{
+					if( (arr[i][j] ==arr[i][k]) || ( arr[i][j] ==arr[l][j] ))
+					{
+						cout<<"0"<<endl;
+						exit(0);
+
+					}
+				}
+			}
+		}
+	}
+}
 
 
 	for(int i=0; i<9; ++i)
